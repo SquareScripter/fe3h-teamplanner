@@ -1,4 +1,4 @@
-const UNITS = [
+export const UNITS = [
   {
     House: "Neutral",
     Name: "Byleth",
