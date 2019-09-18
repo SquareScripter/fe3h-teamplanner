@@ -25,11 +25,6 @@ export default {
       selectedUnit: null,
       unitList: UNITS
     };
-  },
-  watch: {
-    selectedUnit: function(newValue) {
-      console.log(newValue);
-    }
   }
 };
 </script>
