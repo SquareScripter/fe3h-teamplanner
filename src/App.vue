@@ -1,5 +1,8 @@
 <template>
-  <div id="app">
+  <div
+    id="app"
+    :style="{ borderImage: `url(${borderUrl}) 29 repeat`, backgroundImage: `url(${backgroundUrl})`  }"
+  >
     <img width="25%" src="./assets/logo.png">
     <!--<HelloWorld msg="Hello Vue in CodeSandbox!"/>-->
     <UnitPicker :units="unitList" @input="selectedUnit = $event"/>
@@ -13,6 +16,9 @@ import { UNITS } from "./data/units.js";
 import UnitPicker from "./components/UnitPicker";
 import UnitDisplay from "./components/UnitDisplay";
 
+import backgroundUrl from "./assets/fe3h-bg.png";
+import borderUrl from "./assets/fe3h-border.png";
+
 export default {
   name: "App",
   components: {
@@ -23,7 +29,9 @@ export default {
   data: function() {
     return {
       selectedUnit: null,
-      unitList: UNITS
+      unitList: UNITS,
+      backgroundUrl: backgroundUrl,
+      borderUrl: borderUrl
     };
   }
 };
@@ -37,5 +45,7 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  border: solid;
+  border-width: 29px;
 }
 </style>
